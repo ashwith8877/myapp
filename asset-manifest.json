@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ashwith8877/myapp.git/static/css/main.28cbaa07.css",
-    "main.js": "/ashwith8877/myapp.git/static/js/main.45e45035.js",
-    "static/js/453.183908db.chunk.js": "/ashwith8877/myapp.git/static/js/453.183908db.chunk.js",
-    "index.html": "/ashwith8877/myapp.git/index.html",
-    "main.28cbaa07.css.map": "/ashwith8877/myapp.git/static/css/main.28cbaa07.css.map",
-    "main.45e45035.js.map": "/ashwith8877/myapp.git/static/js/main.45e45035.js.map",
-    "453.183908db.chunk.js.map": "/ashwith8877/myapp.git/static/js/453.183908db.chunk.js.map"
+    "main.css": "/myapp/static/css/main.28cbaa07.css",
+    "main.js": "/myapp/static/js/main.c3aba81c.js",
+    "static/js/453.183908db.chunk.js": "/myapp/static/js/453.183908db.chunk.js",
+    "index.html": "/myapp/index.html",
+    "main.28cbaa07.css.map": "/myapp/static/css/main.28cbaa07.css.map",
+    "main.c3aba81c.js.map": "/myapp/static/js/main.c3aba81c.js.map",
+    "453.183908db.chunk.js.map": "/myapp/static/js/453.183908db.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.28cbaa07.css",
-    "static/js/main.45e45035.js"
+    "static/js/main.c3aba81c.js"
   ]
 }
