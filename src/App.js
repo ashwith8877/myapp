@@ -1,15 +1,15 @@
 
 import { useState } from 'react';
 import './App.css';
-// import About from './componenets/About';
+import About from './componenets/About';
 import Navbar from './componenets/Navbar';
 import Text from './componenets/Text';
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
 
-// } from "react-router-dom";
+} from "react-router-dom";
 
 import Alert from './componenets/Alert';
 function App() {
@@ -60,23 +60,21 @@ function App() {
  }
   return (
     <>
-    
-    
-    
-  
-    {/* <Router>     */}
+    <Router>    
       <Navbar mode = {mode} togglermode={togglermode} greeenmode={greeenmode} yellowmode={yellowmode}/>   
       <Alert alert ={alert}></Alert>                               
     <div className='container my-5'>
-{/*       
+      
       <Routes>
-          <Route path="/about" element={<About />}>
-          </Route> */}
-          <Text heading='Enter some description' mode = {mode} showalert={showalert}/>
-          {/* </Route>
-        </Routes> */}
+          <Route exact path="/about" element={<About mode={mode}/>}>
+          
+          </Route>
+          <Route exact path="/text" element={<Text heading='Enter some description' mode = {mode} showalert={showalert}/>}>
+          </Route>
+            
+      </Routes>
     </div>
-    {/* </Router> */}
+    </Router>
   
     </>
     // <Navbar title='Some Website' about="about website"/>

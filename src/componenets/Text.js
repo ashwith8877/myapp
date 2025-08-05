@@ -45,19 +45,19 @@ export default function Text(props) {
     <>
     <h3 style={{color:props.mode==='dark'?'white':'black'}}>{props.heading}</h3>
   <div className="mb-3" style={{backgroundColor:props.mode==='light'?'grey':'light'}}>
-  <textarea className="form-control" id="exampleFormControlTextarea1" rows="10" value={text} onChange={handleonchange} style={{backgroundColor:props.mode==='light'?'grey':'light',color:props.mode==='dark'?'white':'black'}}></textarea>
+  <textarea className="form-control" id="exampleFormControlTextarea1" rows="10" value={text} onChange={handleonchange} style={{backgroundColor:props.mode==='light'?'white':'#d0c1c1',color:props.mode==='dark'?'white':'black'}}></textarea>
   </div>
-  <button className='btn btn-primary mx-2' onClick={tochangtextupper}>change to upper case</button>
-  <button className='btn btn-primary mx-2' onClick={tochangtextlower}>change to lower case</button>
-  <button className='btn btn-primary mx-2' onClick={copyToClipboard}>copy to clipboard</button>
-  <button className='btn btn-primary mx-2' onClick={clear}>clear</button>
+  <button disabled={text.length===0} className='btn btn-primary mx-2 my-2' onClick={tochangtextupper}>change to upper case</button>
+  <button disabled={text.length===0} className='btn btn-primary mx-2 my-2' onClick={tochangtextlower}>change to lower case</button>
+  <button disabled={text.length===0} className='btn btn-primary mx-2 my-2' onClick={copyToClipboard}>copy to clipboard</button>
+  <button disabled={text.length===0} className='btn btn-primary mx-2 my-2' onClick={clear}>clear</button>
 
 
 
   <div className='container my-3' style={{color:props.mode==='dark'?'white':'black'}} >
     <h1>Text words and characters</h1>
-    <p>{text.split(" ").length} words and {text.length} characters</p>
-    <p>{(0.008*text.split(" ").length)} minutes</p>
+    <p>{text.split(" ").filter(ele=>{return ele.length!==0}).length} words and {text.length} characters</p>
+    <p>{(0.008*text.split(" ").filter(ele=>{return ele.length!==0}).length)} minutes</p>
   </div>
 
   <div style={{color:props.mode==='dark'?'white':'black'}}>

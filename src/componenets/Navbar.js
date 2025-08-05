@@ -1,44 +1,45 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 export default function Navbar(props) {
   return (
 
     <div className={`navbar-${props.mode} bg-${props.mode}`}>
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className={`navbar navbar-expand-lg bg${props.mode}`}>
+     
       <div className={`container-fluid navbar-${props.mode} bg-${props.mode}`}>
         <a className="navbar-brand" href="/">Navbar</a>
-        <buthrefn className="navbar-hrefggler" type="buthrefn" data-bs-hrefggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="hrefggle navigation">
+        <button className="navbar-hrefggler" type="buthrefn" data-bs-hrefggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="hrefggle navigation">
           <span className="navbar-hrefggler-icon"></span>
-        </buthrefn>
+        </button>
         
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           
           <ul className="navbar-nav me-auhref mb-2 mb-lg-0">
           <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <Link class="nav-link active" aria-current="page" to="/text">Home</Link>
           </li>
-          {/* <li class="nav-item">
+          <li class="nav-item">
           <Link class="nav-link" to="/about">About</Link>
-          </li> */}
+          </li>
           </ul>
-      
+      </div>
           {/* <form className="d-flex" role="search">
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
             <buthrefn className="btn btn-outline-success" type="submit">Search</buthrefn>
           </form> */}
           
         
-          
+          <div className='enable'>
           <div class={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
           <input class="form-check-input" type="checkbox" onClick={props.togglermode} role="switch" id="switchCheckDefault"/>
           <label class="form-check-label" for="switchCheckDefault" style={{color:props.mode==='dark'?'white':'black'}}>enable dark mode</label>
-        </div>
+          </div>
+        
           <div class={`form-check form-switch text-${props.mode==='green'?'white':'black'}`}>
           <input class="form-check-input" type="checkbox" onClick={props.greeenmode} role="switch" id="switchCheckDefault"/>
           <label class="form-check-label" for="switchCheckDefault" style={{color:props.mode==='green'?'black':'grey'}} >enable green mode</label>
-        </div>
-         <div class={`form-check form-switch text-${props.mode==='yellow'?'white':'black'}`}>
+          </div>
+          <div class={`form-check form-switch text-${props.mode==='yellow'?'white':'black'}`}>
           <input class="form-check-input" type="checkbox" onClick={props.yellowmode} role="switch" id="switchCheckDefault"/>
           <label class="form-check-label" for="switchCheckDefault" style={{color:props.mode==='yellow'?'black':'grey'}} >enable yellow mode</label>
         </div>
